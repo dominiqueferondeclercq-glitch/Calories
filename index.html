@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Calories</title>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Calories">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#d9622b">
+<link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAAFY0lEQVR4nO3dS27bQBBF0XaQtXiSrCpZl3flSbKaDAgQRKSi9emueq90zzSByW5dFi3Lst7+/PoxgGu+VZ8AdBEHQsSBEHEgRBwIEQdCxIEQcSBEHAgRB0LEgRBxIEQcCBEHQsSBEHEgRBwIEQdCxIEQcSBEHAgRB0LEgRBxIEQcCBEHQsSBEHEgRBwIfa8+gTLvH5+3/+e/v3+uOxNZby/yJxjuSuEWr5BL5zimBxHpGkrDONKauNSsklZxFGZx1CaRDnGINHHJvRLvOGSzOPJNxDUOiyyOHBOx/CGYXRnD85zNJofjFv/HaIQ4TY4GZQyrVXhMDqMNvZ3+CDGYHC3LGA7rUo9DfwefIb463duK+MbNpXmLEZ0cL1XGUF2vYhyaO7Wa4Krl4hDcozRqa9eKQ2138kntgFAcUvtSSGcfVJ6tlOzIjc8RlM9tKYk4Mnf/yU03OtXnvcpvn8/a6P3r6Az/deonx9JdTrj43M//RHEc63Y2eVvbLOSoMo5FG1q4m81W1O17jnv38cuH864v+Pf3z07fi5RNjqq3oD153KpnvyXDoyaOkr2beNDkw91+0Lk63FbOd23FnN+/5smhG9xiCiZH2hUs8l7Z5Ik1UfZrK/3K+PJYEx/R5FEk9MLbXU52/P3jM3+enx+0/Afhj0mNY9Zjdl7GlEM8JqGPzAW6To6rFL4BVDiHWfLiWD02dB6V6EzshofZ5NAvY7O6jxxOcbiUsWnQR1Ic6x4/zTI27qu2mRxXLzjlMjZXz9BleGTE8fxDaFrGZlEfCcu3mRzIZxCH9djYmN5clsex9EVRI477oD459C+vZ4ivTj2OS45jY2N35n5xIM3aOHJ+YdOa8jvwzCaH3WT+j9f5m8WBTLpxXM5br8sucrkK2bunbhwoRxwILYyjx11A37p9Fp0csrfhRTTXKxrHpU5zyGUtNnEgH3EgRBwIEQdCxIEQcSBEHAgRB0LEgRBxIGQTh+arD49xWYtoHC6vPsyiud6FcbhcH+7W7bPo5IAC4kBINw6jX8S9i9EvTuvGgXJmcbgPD6/zXxuH8nv9RCi/Y9RsciCTXxxek/nI7szV4+h9ZxFf3fI4Vlwudpfg8NwH9ckxbP/a2pHp37wziANVMuJY9AdZXYbHorGRsHybyWHah+kNZZMUx7pHUbkP91XbTI7h9iEVXh8AcpVTHMOnjwZljMw4Vn+IlU4fq8tIW6nZ5Din0IfCOcySGkfCJ+DVPjYJn2mauUDXyXHeR34i5wf1+lZjlx1H2md3Z/bR9bPs3/78+pF5vM3cK6nwQ+0zD50/Dr8nH2+F94/Pk43b/yn5Cja9lRzVTI6xYO9uvLByfi2vanVzlcUx1lxb927il+cw/Qs+oOopWIfbytH5LebS3H1vcCs5qpwcY+VuJl9tbRZyVBzHKH02MYX7+Z+oj2OkTOPpu+x4zvfq9j1HZH8seZ/V7SQmxyja9KrnpbcoHxtDJ47xYhflOYUyhtQLbyI7Uk5nH4TiGEr7UkVqB7TiGGK7k0xt7XJxDL09yiG4asU4huROLaW5XqFnK1e1fwqjmcVGdHLslPfueeKrU49jyO/gw/TXpX5bOWpzi9HPYmMwOXYue3rOaBVOk2NnOkKMstg4TY6d3S4Pz3O2nBw7ixHimMXGO46NbCK+WWw6xLETqcS9iV2rODaFibTJYtMwjl1aJc2a2HWO46jHW9CSvUocl+7K5RVSuPS6ceBLlj8EQw7iQIg4ECIOhIgDIeJAiDgQIg6EiAMh4kCIOBAiDoSIAyHiQIg4ECIOhIgDIeJAiDgQIg6EiAMh4kCIOBAiDoSIAyHiQIg4ECIOhP4BIhAm/DUeoY0AAAAASUVORK5CYII=">
+
+<style>
+:root{--bg:#faf8f4;--card:#fff;--tx:#222;--mut:#777;--ac:#d9622b;--bd:#e5e0d6;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1b1a18;--card:#262522;--tx:#eee;--mut:#9a958b;--bd:#3a3834}}
+:root[data-theme="dark"]{--bg:#1b1a18;--card:#262522;--tx:#eee;--mut:#9a958b;--bd:#3a3834}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.4 system-ui,-apple-system,Segoe UI,sans-serif}
+main{max-width:560px;margin:0 auto;padding:16px}
+h1{font-size:20px;margin:4px 0 12px}
+.total{position:sticky;top:env(safe-area-inset-top,0px);background:var(--ac);color:#fff;border-radius:14px;padding:12px 16px;z-index:2}
+.total .k{display:flex;justify-content:space-between;align-items:baseline}
+.total b{font-size:28px}
+.mac{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;margin-top:8px;font-size:13px;text-align:center}
+.mac span{background:rgba(255,255,255,.18);border-radius:8px;padding:4px 2px}
+.row{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:12px;margin-top:10px;display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.f{grid-column:1/3}
+select,input{font:inherit;color:var(--tx);background:var(--bg);border:1px solid var(--bd);border-radius:10px;padding:10px;width:100%;box-sizing:border-box}
+input.bad{border-color:#c33}
+.res{grid-column:1/3;display:flex;justify-content:space-between;align-items:center;color:var(--mut);font-size:13px}
+.res b{color:var(--tx);font-size:18px}
+.res div{text-align:right}
+button{font:inherit;border:0;border-radius:10px;padding:8px 12px;cursor:pointer}
+.add{width:100%;margin-top:12px;padding:12px;background:var(--card);color:var(--ac);border:1px dashed var(--ac)}
+.del{background:none;color:var(--mut);padding-left:0}
+small{display:block;color:var(--mut);margin-top:14px;font-size:12px}
+</style>
+</head>
+<body>
+<main>
+<h1>🍽️ Calories du repas</h1>
+<div class="total"><div class="k"><span>Total du repas</span><span><b id="tot">0</b> kcal</span></div>
+<div class="mac"><span>Prot.<br><b id="P">0</b> g</span><span>Gluc.<br><b id="G">0</b> g</span><span>Lip.<br><b id="L">0</b> g</span><span>Fibres<br><b id="B">0</b> g</span></div></div>
+<div id="rows"></div>
+<button class="add" onclick="add()">+ Ajouter un aliment</button>
+<small id="cnt"></small>
+<small>Poids à saisir = poids cru (avant cuisson). Valeurs pour 100 g cru, arrondies d'après les tables de référence (type Ciqual de l'Anses / USDA) : ce sont des moyennes, elles varient selon la variété et la marque. Friture = huile absorbée ajoutée ; grillé = ~10 % du gras de viande/poisson perdu ; bouillir ou cuire au four ne change pas le total. Pour l'huile ou le beurre de poêle, ajoutez-les comme aliment. « Autre » : seules les kcal sont comptées.</small>
+</main>
+<datalist id="dl"></datalist>
+<script>
+// nom|kcal|prot|gluc|lip|fibres|cat  (pour 100 g cru)
+// v viande/poisson, o œuf/végétal, s féculent/légumineuse, p tubercule, l légume, f fruit, d laitier, n noix/graines, g gras, x divers
+const D=`Poulet (blanc)|120|23|0|2.5|0|v
+Poulet (cuisse avec peau)|185|17|0|13|0|v
+Dinde (escalope)|105|24|0|1|0|v
+Bœuf haché 5 %|125|21|0|5|0|v
+Bœuf haché 15 %|215|18|0|15|0|v
+Bœuf (rumsteck)|140|21|0|6|0|v
+Veau (escalope)|110|21|0|2.5|0|v
+Porc (filet)|120|21|0|3.5|0|v
+Porc (côte)|180|19|0|11|0|v
+Porc (poitrine fraîche)|300|15|0|27|0|v
+Agneau (gigot)|190|19|0|12|0|v
+Canard (magret)|190|19|0|13|0|v
+Lapin|135|21|0|5|0|v
+Foie de volaille|120|17|1|5|0|v
+Saucisse de porc|290|13|1|26|0|v
+Jambon blanc|110|19|1|3|0|x
+Saumon|200|20|0|13|0|v
+Cabillaud|82|18|0|0.7|0|v
+Thon frais|130|24|0|3|0|v
+Thon en conserve au naturel|115|26|0|1|0|x
+Sardine|210|25|0|11|0|v
+Maquereau|205|19|0|14|0|v
+Truite|140|20|0|6|0|v
+Colin / Merlu|80|17|0|1|0|v
+Sole|85|17|0|1.5|0|v
+Dorade|100|19|0|2.5|0|v
+Crevettes|85|18|0|1|0|v
+Moules|80|12|4|2|0|v
+Calmar|90|16|3|1.4|0|v
+Œuf entier|143|12.6|0.7|9.5|0|o
+Blanc d'œuf|48|10.5|0.7|0.2|0|o
+Jaune d'œuf|320|16|0.6|27|0|o
+Tofu nature|120|12|2|7|1|o
+Tempeh|190|19|9|11|0|o
+Seitan|140|25|6|2|1|o
+Riz blanc (cru)|350|7|78|0.6|1|s
+Riz complet (cru)|350|7.5|74|2.7|3.5|s
+Pâtes (crues)|355|12|72|1.5|3|s
+Pâtes complètes (crues)|345|13|65|2.5|8|s
+Semoule / couscous (cru)|350|12.5|73|1.5|3.5|s
+Quinoa (cru)|368|14|64|6|7|s
+Boulgour (cru)|342|12|63|1.3|12|s
+Orge perlé (cru)|350|10|73|1.2|15|s
+Flocons d'avoine|370|13|60|7|10|s
+Millet (cru)|378|11|73|4|8.5|s
+Polenta / semoule de maïs|355|8|76|1.5|3|s
+Sarrasin (cru)|343|13|72|3.4|10|s
+Nouilles de riz (crues)|360|6|80|0.6|1|s
+Lentilles (sèches)|350|25|50|1.5|11|s
+Pois chiches (secs)|360|20|45|6|17|s
+Haricots blancs (secs)|340|22|45|1.5|16|s
+Haricots rouges (secs)|335|22|45|1.5|15|s
+Pois cassés (secs)|345|23|50|1.3|15|s
+Farine de blé|350|10|73|1|3|s
+Pain|265|9|50|3|3|x
+Pomme de terre|77|2|17|0.1|2|p
+Patate douce|86|1.6|20|0.1|3|p
+Manioc|160|1.4|38|0.3|1.8|p
+Igname|118|1.5|28|0.2|4|p
+Panais|75|1.2|18|0.3|5|p
+Betterave|43|1.6|10|0.2|2.8|p
+Topinambour|73|2|17|0|1.6|p
+Carotte|41|0.9|10|0.2|2.8|l
+Brocoli|34|2.8|7|0.4|2.6|l
+Courgette|17|1.2|3.1|0.3|1|l
+Tomate|18|0.9|3.9|0.2|1.2|l
+Oignon|40|1.1|9|0.1|1.7|l
+Ail|149|6.4|33|0.5|2.1|l
+Champignon de Paris|22|3.1|3.3|0.3|1|l
+Champignon shiitake|34|2.2|7|0.5|2.5|l
+Épinards|23|2.9|3.6|0.4|2.2|l
+Haricots verts|31|1.8|7|0.2|2.7|l
+Poivron|27|1|6|0.3|2|l
+Chou-fleur|25|1.9|5|0.3|2|l
+Aubergine|25|1|6|0.2|3|l
+Concombre|15|0.7|3.6|0.1|0.5|l
+Salade (laitue)|15|1.4|2.9|0.2|1.3|l
+Chou blanc|25|1.3|6|0.1|2.5|l
+Chou rouge|31|1.4|7|0.2|2.1|l
+Chou de Bruxelles|43|3.4|9|0.3|3.8|l
+Chou kale|49|4.3|9|0.9|3.6|l
+Pak choï|13|1.5|2.2|0.2|1|l
+Poireau|61|1.5|14|0.3|1.8|l
+Céleri-rave|42|1.5|9|0.3|1.8|l
+Radis|16|0.7|3.4|0.1|1.6|l
+Navet|28|0.9|6.4|0.1|1.8|l
+Fenouil|31|1.2|7|0.2|3.1|l
+Asperge|20|2.2|3.9|0.1|2.1|l
+Artichaut|47|3.3|11|0.2|5.4|l
+Petits pois|81|5|14|0.4|5.1|l
+Maïs doux|86|3.3|19|1.4|2|l
+Potiron / courge|26|1|6.5|0.1|0.5|l
+Butternut|45|1|12|0.1|2|l
+Blette|19|1.8|3.7|0.2|1.6|l
+Endive|17|0.9|4|0.1|3.1|l
+Edamame|121|12|9|5|5|l
+Avocat|160|2|9|15|7|f
+Olives vertes|145|1|4|15|3.3|x
+Pomme|52|0.3|14|0.2|2.4|f
+Banane|89|1.1|23|0.3|2.6|f
+Orange|47|0.9|12|0.1|2.4|f
+Clémentine|47|0.9|12|0.2|1.7|f
+Pamplemousse|42|0.8|11|0.1|1.6|f
+Citron|29|1.1|9|0.3|2.8|f
+Poire|57|0.4|15|0.1|3.1|f
+Fraise|32|0.7|7.7|0.3|2|f
+Framboise|52|1.2|12|0.7|6.5|f
+Myrtille|57|0.7|14|0.3|2.4|f
+Raisin|69|0.7|18|0.2|0.9|f
+Kiwi|61|1.1|15|0.5|3|f
+Mangue|60|0.8|15|0.4|1.6|f
+Ananas|50|0.5|13|0.1|1.4|f
+Pêche|39|0.9|10|0.3|1.5|f
+Abricot|48|1.4|11|0.4|2|f
+Cerise|63|1.1|16|0.2|2.1|f
+Melon|34|0.8|8|0.2|0.9|f
+Pastèque|30|0.6|7.6|0.2|0.4|f
+Prune|46|0.7|11|0.3|1.4|f
+Figue|74|0.8|19|0.3|2.9|f
+Grenade|83|1.7|19|1.2|4|f
+Datte séchée|280|2.5|65|0.4|8|f
+Raisins secs|300|3|72|0.5|4|f
+Abricot sec|240|3.4|55|0.5|7|f
+Pruneau|240|2.2|58|0.4|7|f
+Lait demi-écrémé|46|3.2|4.8|1.6|0|d
+Lait entier|64|3.2|4.7|3.6|0|d
+Yaourt nature|55|4|5|2|0|d
+Fromage blanc 0 %|45|7.5|4|0.2|0|d
+Fromage blanc 20 %|75|8|4|3|0|d
+Skyr|63|11|4|0.2|0|d
+Emmental|380|28|0.5|29|0|d
+Comté|410|27|0.5|33|0|d
+Mozzarella|250|18|1|19|0|d
+Parmesan|390|33|0|28|0|d
+Feta|265|14|4|21|0|d
+Fromage de chèvre frais|200|12|2|16|0|d
+Camembert|300|20|0.5|24|0|d
+Ricotta|150|11|3|10|0|d
+Crème fraîche épaisse 30 %|300|2.2|2.5|30|0|d
+Crème légère 15 %|160|3|4|15|0|d
+Amandes|580|21|7|51|12|n
+Noix|690|15|7|65|7|n
+Noisettes|650|15|7|61|10|n
+Noix de cajou|570|18|28|44|3|n
+Pistaches|570|21|17|46|10|n
+Cacahuètes|590|26|8|50|8|n
+Beurre de cacahuète|600|25|12|50|6|n
+Graines de chia|490|17|8|31|34|n
+Graines de lin|530|18|1.5|42|27|n
+Graines de courge|560|30|5|46|6|n
+Graines de tournesol|580|21|12|48|9|n
+Sésame|600|18|12|52|12|n
+Noix de coco râpée|650|6|15|62|16|n
+Huile d'olive|900|0|0|100|0|g
+Huile de tournesol|900|0|0|100|0|g
+Huile de colza|900|0|0|100|0|g
+Huile de coco|900|0|0|100|0|g
+Beurre|740|0.7|0.1|82|0|g
+Margarine|720|0|0|80|0|g
+Chocolat noir 70 %|570|8|32|42|11|x
+Sucre|400|0|100|0|0|x
+Miel|304|0.3|82|0|0|x
+Houmous|230|8|14|18|6|x
+Lait de coco|190|2|3|20|0|x
+Concentré de tomate|80|4|16|0.5|4|x
+Sauce soja|55|6|5|0|0|x
+Autre (saisir kcal / 100 g)|0|0|0|0|0|z`.split("\n").map(l=>{const a=l.split("|");return{n:a[0],k:+a[1],p:+a[2],g:+a[3],l:+a[4],f:+a[5],c:a[6]}});
+const M=["Cru","Bouilli / vapeur","Four / rôti","Grillé / poêlé sans gras","Frit (friture)"];
+const FRY={v:5,o:5,s:5,p:10,l:6,f:0,d:0,n:0,g:0,x:0,z:0}; // g d'huile absorbée / 100 g cru
+function calc(r){
+ const a=D[r.i];if(!a)return{k:0,p:0,g:0,l:0,f:0};
+ const q=r.w/100;let dl=0;
+ if(r.m===4)dl=FRY[a.c]*q;
+ if(r.m===3&&a.c==="v")dl=-0.1*a.l*q;
+ const k=a.c==="z"?r.k*q:a.k*q+dl*9;
+ return{k:Math.max(0,k),p:a.p*q,g:a.g*q,l:Math.max(0,a.l*q+dl),f:a.f*q};
+}
+let rows=[{i:0,w:100,m:0,k:0}];
+document.getElementById("dl").innerHTML=D.map(x=>`<option value="${x.n}">`).join("");
+document.getElementById("cnt").textContent=D.length-1+" aliments disponibles — tapez quelques lettres pour chercher.";
+function find(v){const s=v.trim().toLowerCase();return D.findIndex(x=>x.n.toLowerCase()===s)}
+function setFood(i,el){const j=find(el.value);if(j<0){el.classList.add("bad");return}rows[i].i=j;render()}
+function render(){
+ document.getElementById("rows").innerHTML=rows.map((r,i)=>{const c=calc(r);return`<div class="row">
+ <input class="f" list="dl" value="${D[r.i].n.replace(/"/g,"&quot;")}" onfocus="this.select()" onchange="setFood(${i},this)" placeholder="Rechercher un aliment" aria-label="Aliment">
+ <input type="number" inputmode="decimal" min="0" value="${r.w}" onchange="rows[${i}].w=+this.value||0;render()" aria-label="Poids cru en grammes" placeholder="g cru">
+ <select onchange="rows[${i}].m=+this.value;render()">${M.map((x,j)=>`<option value="${j}" ${j===r.m?"selected":""}>${x}</option>`).join("")}</select>
+ ${D[r.i].c==="z"?`<input class="f" type="number" inputmode="decimal" placeholder="kcal pour 100 g cru" value="${r.k||""}" onchange="rows[${i}].k=+this.value||0;render()">`:""}
+ <div class="res"><button class="del" onclick="rows.splice(${i},1);render()">Supprimer</button><div><b>${Math.round(c.k)}</b> kcal<br>P ${c.p.toFixed(1)} · G ${c.g.toFixed(1)} · L ${c.l.toFixed(1)} · F ${c.f.toFixed(1)}</div></div></div>`}).join("");
+ const t=rows.map(calc).reduce((a,c)=>({k:a.k+c.k,p:a.p+c.p,g:a.g+c.g,l:a.l+c.l,f:a.f+c.f}),{k:0,p:0,g:0,l:0,f:0});
+ tot.textContent=Math.round(t.k);P.textContent=Math.round(t.p);G.textContent=Math.round(t.g);L.textContent=Math.round(t.l);B.textContent=Math.round(t.f);
+}
+function add(){rows.push({i:0,w:100,m:0,k:0});render()}
+render();
+</script>
+</body>
+</html>
